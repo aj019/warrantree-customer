@@ -1,13 +1,16 @@
 package com.mate.android.warrantee.activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import com.mate.android.warrantee.R;
 import com.mate.android.warrantee.adapters.ProductsAdapter;
+import com.mate.android.warrantee.helpers.RecyclerItemClickListener;
 import com.mate.android.warrantee.models.Product;
 
 import java.util.ArrayList;
@@ -42,6 +45,12 @@ public class ProductListActivity extends AppCompatActivity {
 
         adapter = new ProductsAdapter(this,products);
         rvProducts.setAdapter(adapter);
+        rvProducts.addOnItemTouchListener(new RecyclerItemClickListener(this, new RecyclerItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                startActivity(new Intent(ProductListActivity.this,ProductDetailsActivity.class));
+            }
+        }));
 
     }
 }

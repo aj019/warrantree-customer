@@ -23,8 +23,11 @@
             android:parentActivityName=".activities.PastOrdersActivity" />
         <activity android:name=".activities.SelectDeviceActivity" />
         <activity android:name=".auth.MobileVerificationActivity" />
-        <activity android:name=".activities.ProductListActivity"
-            android:parentActivityName=".activities.MainActivity"
+        <activity
+            android:name=".activities.ProductListActivity"
+            android:parentActivityName=".activities.MainActivity" />
+        <activity android:name=".activities.ProductDetailsActivity"
+            android:parentActivityName=".activities.ProductListActivity"
             ></activity>
     </application>
 
