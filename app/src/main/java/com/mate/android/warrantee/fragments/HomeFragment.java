@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.mate.android.warrantee.R;
+import com.mate.android.warrantee.activities.ProductListActivity;
 
 import java.io.ByteArrayOutputStream;
 
@@ -34,7 +35,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_home,container,false);
 
-        fabAddDevice = (FloatingActionButton) v.findViewById(R.id.fabAddDevices);
+        fabAddDevice = (FloatingActionButton) v.findViewById(R.id.fabAddProduct);
         fabAddDevice.setOnClickListener(this);
 
         cvDevices = (CardView) v.findViewById(R.id.cvDevices);
@@ -58,25 +59,26 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         switch (v.getId()){
 
 
-            case R.id.fabAddDevices:
+            case R.id.fabAddProduct:
 
                 Toast.makeText(getActivity(),"Fab",Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.cvDevices:
-                Toast.makeText(getActivity(),"Fab",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),"Devices",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getActivity(), ProductListActivity.class));
                 break;
 
             case R.id.cvAlert:
-                Toast.makeText(getActivity(),"Fab",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),"Alert",Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.cvClaims:
-                Toast.makeText(getActivity(),"Fab",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),"Claims",Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.cvProdShared:
-                Toast.makeText(getActivity(),"Fab",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(),"Shared",Toast.LENGTH_SHORT).show();
                 break;
 
         }
