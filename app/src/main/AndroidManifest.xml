@@ -26,9 +26,10 @@
         <activity
             android:name=".activities.ProductListActivity"
             android:parentActivityName=".activities.MainActivity" />
-        <activity android:name=".activities.ProductDetailsActivity"
-            android:parentActivityName=".activities.ProductListActivity"
-            ></activity>
+        <activity
+            android:name=".activities.ProductDetailsActivity"
+            android:parentActivityName=".activities.ProductListActivity" />
+        <activity android:name=".activities.AlertActivity"></activity>
     </application>
 
 </manifest>

@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.mate.android.warrantee.R;
+import com.mate.android.warrantee.activities.AlertActivity;
 import com.mate.android.warrantee.activities.ProductListActivity;
 
 import java.io.ByteArrayOutputStream;
@@ -71,6 +72,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
             case R.id.cvAlert:
                 Toast.makeText(getActivity(),"Alert",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getActivity(), AlertActivity.class));
                 break;
 
             case R.id.cvClaims:
